@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { ShowIncrement } from '../06-memos/ShowIncrement';
+import { ShowIncrement } from './ShowIncrement';
 
 
 export const CallbackHook = () => {

@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 
 
-export const useFetch = (url) => {
- 
+export const useFetch = ( url ) => {
+
     const [state, setState] = useState({
         data: null,
         isLoading: true,
         hasError: null,
-    });
+    })
+
 
     const getFetch = async () => {
 
@@ -26,15 +27,16 @@ export const useFetch = (url) => {
         });
     }
 
+
     useEffect(() => {
         getFetch();
-    },[url])
-
+    }, [url])
+    
 
 
     return {
-        data: state.data,
+        data:      state.data,
         isLoading: state.isLoading,
-        hasError: state.hasError,
+        hasError:  state.hasError,
     };
 }
